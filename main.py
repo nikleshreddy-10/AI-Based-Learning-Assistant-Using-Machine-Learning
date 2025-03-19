@@ -34,11 +34,11 @@ logging.basicConfig(level=logging.INFO)
 
 app = Flask(__name__)
 app.secret_key = 'your_secret_key' 
-UPLOAD_FOLDER = "C:\\Users\\nikle\\MAJOR PROJECT\\SOURCE CODE\\Contents"
+UPLOAD_FOLDER = "YOUR UPLOAD FOLDER PATH"
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 
 
-groq_api_key = "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"
+groq_api_key = "YOUR GROQ API KEY"
 os.environ["GROQ_API_KEY"] = groq_api_key
 chat_groq = ChatGroq(api_key=os.getenv("GROQ_API_KEY"))
 
@@ -51,7 +51,7 @@ nltk.download("words")
 nltk.download("punkt_tab")
 
 llm = ChatGroq(
-    groq_api_key='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',
+    groq_api_key='YOUR GROQ API KEY',
     temperature=0.5,
     max_tokens=16000,
 )
